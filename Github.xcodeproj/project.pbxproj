@@ -13,6 +13,8 @@
 		EB063416253B176700EAB154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB063414253B176700EAB154 /* LaunchScreen.storyboard */; };
 		EB063421253B176700EAB154 /* GithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB063420253B176700EAB154 /* GithubTests.swift */; };
 		EB06342C253B176700EAB154 /* GithubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB06342B253B176700EAB154 /* GithubUITests.swift */; };
+		EB063442253B1CF200EAB154 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB063440253B1CF200EAB154 /* LoginViewController.swift */; };
+		EB063443253B1CF200EAB154 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB063441253B1CF200EAB154 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		EB063427253B176700EAB154 /* GithubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB06342B253B176700EAB154 /* GithubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUITests.swift; sourceTree = "<group>"; };
 		EB06342D253B176700EAB154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB063440253B1CF200EAB154 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB063441253B1CF200EAB154 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		EB063408253B176600EAB154 /* Github */ = {
 			isa = PBXGroup;
 			children = (
+				EB06343F253B1B4300EAB154 /* UI */,
 				EB063409253B176600EAB154 /* AppDelegate.swift */,
 				EB06340B253B176600EAB154 /* SceneDelegate.swift */,
 				EB063412253B176700EAB154 /* Assets.xcassets */,
@@ -120,6 +125,15 @@
 				EB06342D253B176700EAB154 /* Info.plist */,
 			);
 			path = GithubUITests;
+			sourceTree = "<group>";
+		};
+		EB06343F253B1B4300EAB154 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EB063440253B1CF200EAB154 /* LoginViewController.swift */,
+				EB063441253B1CF200EAB154 /* LoginViewController.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +241,7 @@
 			files = (
 				EB063416253B176700EAB154 /* LaunchScreen.storyboard in Resources */,
 				EB063413253B176700EAB154 /* Assets.xcassets in Resources */,
+				EB063443253B1CF200EAB154 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB063442253B1CF200EAB154 /* LoginViewController.swift in Sources */,
 				EB06340A253B176600EAB154 /* AppDelegate.swift in Sources */,
 				EB06340C253B176600EAB154 /* SceneDelegate.swift in Sources */,
 			);
