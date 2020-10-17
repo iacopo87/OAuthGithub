@@ -16,6 +16,8 @@
 		EB063442253B1CF200EAB154 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB063440253B1CF200EAB154 /* LoginViewController.swift */; };
 		EB063443253B1CF200EAB154 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB063441253B1CF200EAB154 /* LoginViewController.xib */; };
 		EB06344D253B352300EAB154 /* AppDependeciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB06344C253B352300EAB154 /* AppDependeciesContainer.swift */; };
+		EB063456253B96C900EAB154 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB063455253B96C900EAB154 /* OAuthService.swift */; };
+		EB06346B253B986100EAB154 /* LocalOauthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB06346A253B986100EAB154 /* LocalOauthClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		EB063440253B1CF200EAB154 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB063441253B1CF200EAB154 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		EB06344C253B352300EAB154 /* AppDependeciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependeciesContainer.swift; sourceTree = "<group>"; };
+		EB063455253B96C900EAB154 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		EB06346A253B986100EAB154 /* LocalOauthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalOauthClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				EB06343F253B1B4300EAB154 /* UI */,
+				EB063454253B96B500EAB154 /* Domain */,
+				EB06345D253B973A00EAB154 /* Infrastructure */,
 				EB06344B253B34DB00EAB154 /* Dependencies */,
 				EB06344A253B34BC00EAB154 /* Supporting Files */,
 				EB063409253B176600EAB154 /* AppDelegate.swift */,
@@ -153,6 +159,22 @@
 				EB06344C253B352300EAB154 /* AppDependeciesContainer.swift */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		EB063454253B96B500EAB154 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EB063455253B96C900EAB154 /* OAuthService.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EB06345D253B973A00EAB154 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				EB06346A253B986100EAB154 /* LocalOauthClient.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB06346B253B986100EAB154 /* LocalOauthClient.swift in Sources */,
 				EB063442253B1CF200EAB154 /* LoginViewController.swift in Sources */,
 				EB06344D253B352300EAB154 /* AppDependeciesContainer.swift in Sources */,
+				EB063456253B96C900EAB154 /* OAuthService.swift in Sources */,
 				EB06340A253B176600EAB154 /* AppDelegate.swift in Sources */,
 				EB06340C253B176600EAB154 /* SceneDelegate.swift in Sources */,
 			);

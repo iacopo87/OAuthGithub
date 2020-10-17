@@ -9,7 +9,8 @@ import UIKit
 
 class AppDependencyContainer {
     func makeMainViewController() -> UIViewController {
-        let loginVC = LoginViewController()
+        let oAuthService = OAuthService(oauthClient: LocalOauthClient())
+        let loginVC = LoginViewController(oAuthService: oAuthService)
         let navigationController = UINavigationController(rootViewController: loginVC)
         return navigationController
     }

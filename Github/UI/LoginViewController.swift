@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SafariServices
 
 class LoginViewController: UIViewController {
-    
-    init() {
+    let oAuthService: OAuthService
+    init(oAuthService: OAuthService) {
+        self.oAuthService = oAuthService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -23,5 +25,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLoginClick(_ sender: Any) {
+        guard let url = oAuthService.getAuthPageUrl() else { return }
+        
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.modalPresentationStyle = .fullScreen
+        present(safariVC, animated: true, completion: nil)
     }
 }
