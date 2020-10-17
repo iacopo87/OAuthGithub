@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func onLoginClick(_ sender: Any) {
