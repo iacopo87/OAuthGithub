@@ -21,6 +21,12 @@
 		EB55684B253C3C4F0078C518 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */; };
 		EB556850253C3C730078C518 /* DeepLinkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55684F253C3C730078C518 /* DeepLinkTest.swift */; };
 		EB556858253C9B390078C518 /* OAuthServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB556857253C9B390078C518 /* OAuthServiceTest.swift */; };
+		EBB0A94B253CD9E7006BD86A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A949253CD9E7006BD86A /* HTTPClient.swift */; };
+		EBB0A94C253CD9E7006BD86A /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A94A253CD9E7006BD86A /* HttpRequest.swift */; };
+		EBB0A952253CDA49006BD86A /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A951253CDA49006BD86A /* Encodable.swift */; };
+		EBB0A95A253CDAA3006BD86A /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A957253CDAA3006BD86A /* TestHelper.swift */; };
+		EBB0A95B253CDAA3006BD86A /* HttpRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A958253CDAA3006BD86A /* HttpRequestTest.swift */; };
+		EBB0A95C253CDAA3006BD86A /* HttpClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A959253CDAA3006BD86A /* HttpClientTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		EB55684F253C3C730078C518 /* DeepLinkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkTest.swift; sourceTree = "<group>"; };
 		EB556857253C9B390078C518 /* OAuthServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceTest.swift; sourceTree = "<group>"; };
+		EBB0A949253CD9E7006BD86A /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		EBB0A94A253CD9E7006BD86A /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		EBB0A951253CDA49006BD86A /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		EBB0A957253CDAA3006BD86A /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		EBB0A958253CDAA3006BD86A /* HttpRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestTest.swift; sourceTree = "<group>"; };
+		EBB0A959253CDAA3006BD86A /* HttpClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,7 @@
 				EB063454253B96B500EAB154 /* Domain */,
 				EB06345D253B973A00EAB154 /* Infrastructure */,
 				EB06344B253B34DB00EAB154 /* Dependencies */,
+				EBB0A950253CDA33006BD86A /* Extensions */,
 				EB06344A253B34BC00EAB154 /* Supporting Files */,
 				EB063409253B176600EAB154 /* AppDelegate.swift */,
 				EB06340B253B176600EAB154 /* SceneDelegate.swift */,
@@ -180,6 +193,7 @@
 		EB06345D253B973A00EAB154 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EBB0A948253CD9D1006BD86A /* Networking */,
 				EB06346A253B986100EAB154 /* LocalOauthClient.swift */,
 				EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */,
 			);
@@ -197,9 +211,37 @@
 		EB556860253C9B440078C518 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EBB0A956253CDA8F006BD86A /* Networking */,
 				EB55684F253C3C730078C518 /* DeepLinkTest.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		EBB0A948253CD9D1006BD86A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EBB0A949253CD9E7006BD86A /* HTTPClient.swift */,
+				EBB0A94A253CD9E7006BD86A /* HttpRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EBB0A950253CDA33006BD86A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBB0A951253CDA49006BD86A /* Encodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EBB0A956253CDA8F006BD86A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EBB0A959253CDAA3006BD86A /* HttpClientTest.swift */,
+				EBB0A958253CDAA3006BD86A /* HttpRequestTest.swift */,
+				EBB0A957253CDAA3006BD86A /* TestHelper.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,11 +376,14 @@
 			files = (
 				EB06346B253B986100EAB154 /* LocalOauthClient.swift in Sources */,
 				EB063442253B1CF200EAB154 /* LoginViewController.swift in Sources */,
+				EBB0A94B253CD9E7006BD86A /* HTTPClient.swift in Sources */,
 				EB06344D253B352300EAB154 /* AppDependeciesContainer.swift in Sources */,
 				EB063456253B96C900EAB154 /* OAuthService.swift in Sources */,
+				EBB0A94C253CD9E7006BD86A /* HttpRequest.swift in Sources */,
 				EB06340A253B176600EAB154 /* AppDelegate.swift in Sources */,
 				EB06340C253B176600EAB154 /* SceneDelegate.swift in Sources */,
 				EB55684B253C3C4F0078C518 /* DeepLinkHandler.swift in Sources */,
+				EBB0A952253CDA49006BD86A /* Encodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB063421253B176700EAB154 /* GithubTests.swift in Sources */,
+				EBB0A95B253CDAA3006BD86A /* HttpRequestTest.swift in Sources */,
+				EBB0A95C253CDAA3006BD86A /* HttpClientTest.swift in Sources */,
 				EB556850253C3C730078C518 /* DeepLinkTest.swift in Sources */,
 				EB556858253C9B390078C518 /* OAuthServiceTest.swift in Sources */,
+				EBB0A95A253CDAA3006BD86A /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
