@@ -25,6 +25,7 @@ class OAuthService {
     }
     private let oauthClient: OAuthClient
     private var state: String?
+    var onAuthenticationResult: ((Result<TokenBag, Error>) -> Void)?
 
     init(oauthClient: OAuthClient) {
         self.oauthClient = oauthClient
@@ -38,11 +39,17 @@ class OAuthService {
     
     func exchangeCodeForToken(url: URL) {
         guard let state = state, let code = getCodeFromUrl(url: url) else {
+            onAuthenticationResult?(.failure(OAthError.malformedLink))
             return
         }
         
-        oauthClient.exchangeCodeForToken(code: code, state: state) { _ in
-            
+        oauthClient.exchangeCodeForToken(code: code, state: state) { [weak self] result in
+            switch result {
+            case .success(let tokenBag):
+                self?.onAuthenticationResult?(.success(tokenBag))
+            case .failure:
+                self?.onAuthenticationResult?(.failure(OAthError.exchangeFailed))
+            }
         }
     }
 }
