@@ -22,6 +22,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let urlContext = URLContexts.first {
+            let url = urlContext.url
+            if let deepLink = DeepLink(url: url) {
+                dependencyContainer.deepLinkHandler.handleDeepLinkIfPossible(deepLink: deepLink)
+            }
+        }
+    }
+
     func sceneDidDisconnect(_ scene: UIScene) {
     }
 
