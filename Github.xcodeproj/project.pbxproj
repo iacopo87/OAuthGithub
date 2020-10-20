@@ -21,6 +21,7 @@
 		EB55684B253C3C4F0078C518 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */; };
 		EB556850253C3C730078C518 /* DeepLinkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55684F253C3C730078C518 /* DeepLinkTest.swift */; };
 		EB556858253C9B390078C518 /* OAuthServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB556857253C9B390078C518 /* OAuthServiceTest.swift */; };
+		EBAFB4A6253F77C100528240 /* RemoteOAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFB4A5253F77C100528240 /* RemoteOAuthClient.swift */; };
 		EBB0A94B253CD9E7006BD86A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A949253CD9E7006BD86A /* HTTPClient.swift */; };
 		EBB0A94C253CD9E7006BD86A /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A94A253CD9E7006BD86A /* HttpRequest.swift */; };
 		EBB0A952253CDA49006BD86A /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A951253CDA49006BD86A /* Encodable.swift */; };
@@ -67,6 +68,7 @@
 		EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		EB55684F253C3C730078C518 /* DeepLinkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkTest.swift; sourceTree = "<group>"; };
 		EB556857253C9B390078C518 /* OAuthServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceTest.swift; sourceTree = "<group>"; };
+		EBAFB4A5253F77C100528240 /* RemoteOAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOAuthClient.swift; sourceTree = "<group>"; };
 		EBB0A949253CD9E7006BD86A /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		EBB0A94A253CD9E7006BD86A /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		EBB0A951253CDA49006BD86A /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				EBB0A948253CD9D1006BD86A /* Networking */,
 				EB06346A253B986100EAB154 /* LocalOauthClient.swift */,
 				EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */,
+				EBAFB4A5253F77C100528240 /* RemoteOAuthClient.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				EB06340C253B176600EAB154 /* SceneDelegate.swift in Sources */,
 				EB55684B253C3C4F0078C518 /* DeepLinkHandler.swift in Sources */,
 				EBB0A952253CDA49006BD86A /* Encodable.swift in Sources */,
+				EBAFB4A6253F77C100528240 /* RemoteOAuthClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

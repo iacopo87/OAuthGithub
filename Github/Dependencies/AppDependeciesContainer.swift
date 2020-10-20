@@ -12,7 +12,14 @@ class AppDependencyContainer {
     
     func makeMainViewController() -> UIViewController {
         let redirectUri = URL(string: "it.iacopo.github://authentication")!
-        let oAuthService = OAuthService(oauthClient: LocalOauthClient())
+        let oAuthConfig = OAuthConfig(authorizationUrl: URL(string: "https://github.com/login/oauth/authorize")!,
+                                      tokenUrl: URL(string: "https://github.com/login/oauth/access_token")!,
+                                      clientId: "yourClientId",
+                                      clientSecret: "yourClientSecret",
+                                      redirectUri: redirectUri,
+                                      scopes: ["repo", "user"])
+        let oAuthClient = RemoteOAuthClient(config: oAuthConfig, httpClient: HTTPClient())
+        let oAuthService = OAuthService(oauthClient: oAuthClient)
         let deepLinkCallback: (DeepLink) -> Void = { deepLink in
             if case .oAuth(let url) = deepLink {
                 oAuthService.exchangeCodeForToken(url: url)
