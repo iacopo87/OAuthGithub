@@ -9,6 +9,7 @@ import UIKit
 
 class AppDependencyContainer {
     let deepLinkHandler = DeepLinkHandler()
+    let tokenRepository = InMemoryTokenRepository()
     
     func makeMainViewController() -> UIViewController {
         let redirectUri = URL(string: "it.iacopo.github://authentication")!
@@ -19,7 +20,7 @@ class AppDependencyContainer {
                                       redirectUri: redirectUri,
                                       scopes: ["repo", "user"])
         let oAuthClient = RemoteOAuthClient(config: oAuthConfig, httpClient: HTTPClient())
-        let oAuthService = OAuthService(oauthClient: oAuthClient)
+        let oAuthService = OAuthService(oauthClient: oAuthClient, tokenRepository: InMemoryTokenRepository)
         let deepLinkCallback: (DeepLink) -> Void = { deepLink in
             if case .oAuth(let url) = deepLink {
                 oAuthService.exchangeCodeForToken(url: url)

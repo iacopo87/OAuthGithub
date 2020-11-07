@@ -18,6 +18,8 @@
 		EB06344D253B352300EAB154 /* AppDependeciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB06344C253B352300EAB154 /* AppDependeciesContainer.swift */; };
 		EB063456253B96C900EAB154 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB063455253B96C900EAB154 /* OAuthService.swift */; };
 		EB06346B253B986100EAB154 /* LocalOauthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB06346A253B986100EAB154 /* LocalOauthClient.swift */; };
+		EB54C17C2557100100DAD52A /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54C17B2557100100DAD52A /* TokenRepository.swift */; };
+		EB54C1812557104100DAD52A /* InMemoryTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54C1802557104100DAD52A /* InMemoryTokenRepository.swift */; };
 		EB55684B253C3C4F0078C518 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */; };
 		EB556850253C3C730078C518 /* DeepLinkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55684F253C3C730078C518 /* DeepLinkTest.swift */; };
 		EB556858253C9B390078C518 /* OAuthServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB556857253C9B390078C518 /* OAuthServiceTest.swift */; };
@@ -65,6 +67,8 @@
 		EB06344C253B352300EAB154 /* AppDependeciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependeciesContainer.swift; sourceTree = "<group>"; };
 		EB063455253B96C900EAB154 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		EB06346A253B986100EAB154 /* LocalOauthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalOauthClient.swift; sourceTree = "<group>"; };
+		EB54C17B2557100100DAD52A /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		EB54C1802557104100DAD52A /* InMemoryTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryTokenRepository.swift; sourceTree = "<group>"; };
 		EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
 		EB55684F253C3C730078C518 /* DeepLinkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkTest.swift; sourceTree = "<group>"; };
 		EB556857253C9B390078C518 /* OAuthServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceTest.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				EB063455253B96C900EAB154 /* OAuthService.swift */,
+				EB54C17B2557100100DAD52A /* TokenRepository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				EB06346A253B986100EAB154 /* LocalOauthClient.swift */,
 				EB55684A253C3C4F0078C518 /* DeepLinkHandler.swift */,
 				EBAFB4A5253F77C100528240 /* RemoteOAuthClient.swift */,
+				EB54C1802557104100DAD52A /* InMemoryTokenRepository.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -383,10 +389,12 @@
 				EB06344D253B352300EAB154 /* AppDependeciesContainer.swift in Sources */,
 				EB063456253B96C900EAB154 /* OAuthService.swift in Sources */,
 				EBB0A94C253CD9E7006BD86A /* HttpRequest.swift in Sources */,
+				EB54C1812557104100DAD52A /* InMemoryTokenRepository.swift in Sources */,
 				EB06340A253B176600EAB154 /* AppDelegate.swift in Sources */,
 				EB06340C253B176600EAB154 /* SceneDelegate.swift in Sources */,
 				EB55684B253C3C4F0078C518 /* DeepLinkHandler.swift in Sources */,
 				EBB0A952253CDA49006BD86A /* Encodable.swift in Sources */,
+				EB54C17C2557100100DAD52A /* TokenRepository.swift in Sources */,
 				EBAFB4A6253F77C100528240 /* RemoteOAuthClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,11 +24,13 @@ class OAuthService {
         case exchangeFailed
     }
     private let oauthClient: OAuthClient
+    private let tokenRepository: TokenRepository
     private var state: String?
     var onAuthenticationResult: ((Result<TokenBag, Error>) -> Void)?
 
-    init(oauthClient: OAuthClient) {
+    init(oauthClient: OAuthClient, tokenRepository: TokenRepository) {
         self.oauthClient = oauthClient
+        self.tokenRepository = tokenRepository
     }
     
     func getAuthPageUrl(state: String = UUID().uuidString) -> URL? {
@@ -46,6 +48,7 @@ class OAuthService {
         oauthClient.exchangeCodeForToken(code: code, state: state) { [weak self] result in
             switch result {
             case .success(let tokenBag):
+                try? self?.tokenRepository.setToken(tokenBag: tokenBag)
                 self?.onAuthenticationResult?(.success(tokenBag))
             case .failure:
                 self?.onAuthenticationResult?(.failure(OAthError.exchangeFailed))
