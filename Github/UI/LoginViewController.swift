@@ -10,11 +10,15 @@ import SafariServices
 
 class LoginViewController: UIViewController {
     let oAuthService: OAuthService
-    init(oAuthService: OAuthService) {
+    private let makeHomeViewController: () -> UIViewController
+    
+    init(oAuthService: OAuthService ,makeHomeViewController: @escaping () -> UIViewController) {
         self.oAuthService = oAuthService
+        self.makeHomeViewController = makeHomeViewController
+      
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -37,13 +41,9 @@ class LoginViewController: UIViewController {
         DispatchQueue.main.async {
             self.presentedViewController?.dismiss(animated: true) {
                 switch result {
-                case .success(let tokenBag):
-                    let alert = UIAlertController(title: "Token",
-                                                  message: tokenBag.accessToken,
-                                                  preferredStyle: .alert)
+                case .success:
+                    self.navigationController?.pushViewController(self.makeHomeViewController(), animated: true)
 
-                    alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-                    self.present(alert, animated: true)
                 case .failure:
                     let alert = UIAlertController(title: "Something went wrong :(",
                                                   message: "Authentication error",
